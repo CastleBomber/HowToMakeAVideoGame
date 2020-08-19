@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody rb;
 
     public float forwardForce = 2000f;
-    public float sidewaysForce = 500f;
+    public float sidewaysForce = 100f; // having problems w/ 500f
 
     // mesh w/ physics
     void FixedUpdate()

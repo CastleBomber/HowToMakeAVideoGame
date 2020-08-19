@@ -9,6 +9,8 @@ public class PlayerCollision : MonoBehaviour
     {
         if (collisionInfo.collider.tag == "Obstacle")
         {
+            //movement = GameObject.Find("Obstacle").GetComponent<PlayerMovement>();
+            //i tried
             movement.enabled = false;
         }
     }
