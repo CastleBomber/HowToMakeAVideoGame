@@ -5,11 +5,16 @@ public class PlayerMovement : MonoBehaviour
     // ref to rigigbody comp
     public Rigidbody rb;
 
-    public float forwardForce = 2000f;
-    public float sidewaysForce = 100f; // having problems w/ 500f
+    public static float forwardForce = 2000;
+    public float sidewaysForce;
 
-    // mesh w/ physics
-    void FixedUpdate()
+	private void Start()
+	{
+        rb = GetComponent<Rigidbody>();
+	}
+
+	// mesh w/ physics
+	void FixedUpdate()
     {
         rb.AddForce(0, 0, forwardForce * Time.deltaTime);
 

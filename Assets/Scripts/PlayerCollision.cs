@@ -3,15 +3,18 @@
 public class PlayerCollision : MonoBehaviour
 {
     public PlayerMovement movement;
-    
+    //public Player
     
     void OnCollisionEnter (Collision collisionInfo)
     {
-        if (collisionInfo.collider.tag == "Obstacle")
+        //movement = GetComponent<PlayerMovement>();
+        Debug.Log("we hit something");
+
+        if (collisionInfo.collider.CompareTag("Obstacle"))
         {
-            //movement = GameObject.Find("Obstacle").GetComponent<PlayerMovement>();
-            //i tried
-            movement.enabled = false;
+			movement.enabled = false;
+            Debug.Log("inside movement disabled  ->" + collisionInfo.collider.tag);
+            PlayerMovement.forwardForce = 0;
         }
     }
 }
