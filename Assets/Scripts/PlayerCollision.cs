@@ -13,7 +13,6 @@ public class PlayerCollision : MonoBehaviour
         if (collisionInfo.collider.CompareTag("Obstacle"))
         {
 			movement.enabled = false;
-            Debug.Log("deltaTime baby!:    -->>  " + Time.deltaTime);
         }
     }
 }
