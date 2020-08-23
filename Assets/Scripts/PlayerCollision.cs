@@ -13,8 +13,7 @@ public class PlayerCollision : MonoBehaviour
         if (collisionInfo.collider.CompareTag("Obstacle"))
         {
 			movement.enabled = false;
-            Debug.Log("inside movement disabled  ->" + collisionInfo.collider.tag);
-            PlayerMovement.forwardForce = 0;
+            Debug.Log("deltaTime baby!:    -->>  " + Time.deltaTime);
         }
     }
 }
