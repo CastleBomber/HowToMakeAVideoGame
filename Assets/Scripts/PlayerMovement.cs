@@ -4,7 +4,6 @@ public class PlayerMovement : MonoBehaviour
 {
     // ref to rigigbody comp
     public Rigidbody rb;
-
     public float forwardForce;
     public float sidewaysForce;
 
@@ -32,6 +31,11 @@ public class PlayerMovement : MonoBehaviour
         {
           rb.AddForce(-sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
+
+        if (rb.position.y < -1f)
+		{
+            FindObjectOfType<GameManager>().EndGame();
+		}
 
     }
 }
