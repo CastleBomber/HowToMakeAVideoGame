@@ -63,8 +63,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Credits.cs" />
     <Compile Include="Assets\EndTrigger.cs" />
     <Compile Include="Assets\LevelComplete.cs" />
+    <Compile Include="Assets\Menu.cs" />
     <Compile Include="Assets\Scripts\FollowPlayer.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\PlayerCollision.cs" />
